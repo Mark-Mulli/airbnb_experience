@@ -4,7 +4,40 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .navbar {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 1rem 0.75rem;
+}
+
+section {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroImage {
+    align-self: center;
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+.heroTitle {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+
+.heroContent {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 0;
 }
