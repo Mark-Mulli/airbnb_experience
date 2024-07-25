@@ -12,6 +12,7 @@ export default function App() {
             <Navbar />
             <Hero />
             <Card 
+                //use require function to render the image
                 img = {require("./images/image_one.png")}
                 rating = {5.0}
                 reviewCount = {6}
