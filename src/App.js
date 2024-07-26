@@ -14,13 +14,7 @@ export default function App() {
             <Card 
                 //use require function to render the image
                 key = {item.id}
-                img = {require(`./images/${item.coverImg}`)}
-                rating = {item.stats.rating}
-                reviewCount = {item.stats.reviewCount}
-                country = {item.location}
-                title = {item.title}
-                price = {item.price} 
-                openSpots = {item.openSpots}
+                {...item}
             />
         );
     });
