@@ -50,14 +50,26 @@ section {
     margin-top: 0;
 }
 
+.cards-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
 .card {
     width: 175px;
     font-size: 12px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    position: relative;
 }
 
 .card--Image {
     width: 100%;
     border-radius: 9px;
+    height: 234px;
+    width: 175px;
 }
 
 .card--stats {
@@ -67,5 +79,15 @@ section {
 
 .star--Image {
     height: 14px;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: #FFF;
+    padding: 4px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
 

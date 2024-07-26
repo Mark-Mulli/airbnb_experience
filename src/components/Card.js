@@ -5,8 +5,18 @@ import React from "react";
 import starImg from "../images/Star 1.png"  
 
 export default function Card(props) {
+
+    let badgeText
+    if (props.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } 
+    else if (props.country === "Online") {
+        badgeText = "ONLINE"
+    }
+    
     return (
-        <section className="card">
+        <div className="card">
+            {badgeText && <div className="card--badge">{badgeText}</div>}
             <img src= {props.img} alt="card Img" className="card--Image"></img>
 
             <div className="card--stats">
@@ -18,6 +28,6 @@ export default function Card(props) {
 
             <p>{props.title}</p>
             <p><span className="bold">From ${props.price} </span>/ person </p>
-        </section>
+        </div>
     ); 
 }

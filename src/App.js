@@ -20,6 +20,7 @@ export default function App() {
                 country = {item.location}
                 title = {item.title}
                 price = {item.price} 
+                openSpots = {item.openSpots}
             />
         );
     });
@@ -28,7 +29,9 @@ export default function App() {
         <div>
             <Navbar />
             <Hero />
-            {review}
+            <section className="cards-list">
+                {review}
+            </section>
         </div>
     );
 }

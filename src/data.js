@@ -10,7 +10,8 @@ const data = [
             rating: 5.0,
             reviewCount: 6
         },
-        location: "Online"
+        location: "Online",
+        openSpots: 0
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ const data = [
             rating: 5.0,
             reviewCount: 30
         },
-        location: "Online"
+        location: "Online",
+        openSpots: 27
     },
     {
         id: 3,
@@ -32,8 +34,11 @@ const data = [
             rating: 4.8,
             reviewCount: 2
         },
-        location: "Online"
+        location: "Kenya",
+        openSpots: 3
     }
+    
+    
 
 ]
 
