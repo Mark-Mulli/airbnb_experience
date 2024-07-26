@@ -5,21 +5,30 @@ import "./styles.css"
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
+import data from "./data";
 
 export default function App() { 
+
+    const review = data.map(item => {
+        return (
+            <Card 
+                //use require function to render the image
+                key = {item.id}
+                img = {require(`./images/${item.coverImg}`)}
+                rating = {item.stats.rating}
+                reviewCount = {item.stats.reviewCount}
+                country = {item.location}
+                title = {item.title}
+                price = {item.price} 
+            />
+        );
+    });
+
     return (
         <div>
             <Navbar />
             <Hero />
-            <Card 
-                //use require function to render the image
-                img = {require("./images/image_one.png")}
-                rating = {5.0}
-                reviewCount = {6}
-                country = "Kenya"
-                title = "Life lessons with Katie Zaferes"
-                price = {136} 
-            />
+            {review}
         </div>
     );
 }
